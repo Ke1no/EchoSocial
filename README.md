@@ -44,4 +44,4 @@ curl -X POST http://127.0.0.1:8080/upload -H 'Content-Type: application/json' -d
 
 Expected: `Post received: Hello NetworkAI`. No database write occurs.
 
-See [中文开发顺序](docs/NEXT_STEPS.zh-CN.md), [course mapping](docs/COURSE_MAP.md) and [architecture](docs/ARCHITECTURE.md).
+See [development roadmap](docs/NEXT_STEPS.md), [course mapping](docs/COURSE_MAP.md) and [architecture](docs/ARCHITECTURE.md).
