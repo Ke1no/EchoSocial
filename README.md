@@ -1,21 +1,43 @@
 # NetworkAI
 
-Course-aligned AI social-network project — **scaffold / work in progress**.
+### A typed web client meets a Go API
 
-Go (`socialai`) · Gorilla Mux · Next.js · React · TypeScript · Tailwind CSS
+An AI social-network project starting with a working client-to-server message flow. Compose a message in Next.js, submit it to the Go handler, and inspect the server acknowledgement.
 
-## Current status
+**Go · Gorilla Mux · Next.js · React · TypeScript · Tailwind CSS**
 
-The provided course document currently reaches Lesson 30 (Go Handlers). This repository implements that local upload acknowledgement and provides a small Next.js UI shell based on the project overview.
+[Run locally](#run-locally) · [Architecture details](docs/ARCHITECTURE.md) · [Development roadmap](docs/NEXT_STEPS.md)
 
-| Included now | Planned later |
+![NetworkAI message submission and API acknowledgement](docs/assets/preview.jpg)
+
+*Actual browser capture after a successful request to the running Go API. The message is acknowledged, not stored or published.*
+
+## Engineering highlights
+
+- A Next.js form exercises the Go API through a server-side rewrite.
+- The handler bounds request size, rejects malformed JSON and validates message length.
+- Handler tests cover input validation and response behavior.
+- The project separates frontend, HTTP handlers and the post model for future persistence and authentication.
+
+## Architecture
+
+```mermaid
+flowchart LR
+  UI[Next.js form] --> Proxy[Server rewrite]
+  Proxy --> Handler[Go upload handler]
+  Handler --> Validate[Validate JSON and message]
+  Validate --> Reply[Text acknowledgement]
+```
+
+## Current scope
+
+| Working local demo | Next milestones |
 | --- | --- |
-| `socialai` module; `model.Post`; `handler.InitRouter`; POST `/upload` | Signup, JWT login, persistent posts and ownership |
-| Bounded JSON parsing, error responses and handler tests | Elasticsearch recent/personal search |
-| Next.js development page and upload test form | OpenAI image generation; full feed/editor UI |
-| No credentials required for the local demo | App Engine + GCE deployment |
+| Message form and upload acknowledgement | Persistent posts and ownership |
+| Bounded JSON parsing and handler tests | Signup and JWT login |
+| No credentials required | Elasticsearch search and AI image generation |
 
-**The upload endpoint only acknowledges the message. It does not save or publish a post, upload a file, authenticate a user or generate an image.** It listens on loopback by default. Do not deploy it as a production social service.
+**Status: runnable API scaffold, in active development.** The upload endpoint does not save posts, upload files or generate images. The course implementation currently reaches Go Handlers (Lesson 30). [Screenshot reproduction](docs/SHOWCASE.md).
 
 ## Run locally
 
