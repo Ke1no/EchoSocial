@@ -9,3 +9,5 @@ Start Go and Next.js using the README. Enter a short message and submit the form
 ## Interpretation
 
 Screenshots document the visible state of this development scaffold. They do not imply a public deployment, production readiness or completion of planned features. See the README for implemented scope and validation.
+
+The screenshots show the current EchoSocial branding and replace the earlier preview assets.

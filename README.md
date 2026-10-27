@@ -8,11 +8,9 @@ An AI social-network project starting with a working client-to-server message fl
 
 [Run locally](#run-locally) · [Architecture details](docs/ARCHITECTURE.md) · [Development roadmap](docs/NEXT_STEPS.md)
 
-![EchoSocial message submission and API acknowledgement](docs/assets/preview.jpg)
+![EchoSocial message submission and API acknowledgement](docs/assets/echosocial-preview.jpg)
 
 *Actual browser capture after a successful request to the running Go API. The message is acknowledged, not stored or published.*
-
-*Screenshots were captured before the project rename and retain the previous display name.*
 
 ## Engineering highlights
 

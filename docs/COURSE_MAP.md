@@ -1,6 +1,6 @@
 # Course alignment
 
-Source: user-provided [September 2026 Project Course Archive 2 (NetworkAI)](https://docs.google.com/document/d/1s6NmhrRue31JVLkQzwpn_ZFW-_ctMEkPcCBRmvNiyIY/edit), read 2026-10-26.
+Source: user-provided [September 2026 Project Course Archive 2](https://docs.google.com/document/d/1s6NmhrRue31JVLkQzwpn_ZFW-_ctMEkPcCBRmvNiyIY/edit), read 2026-10-26.
 
 The readable document contains Lessons 23, 25, 29 and 30. Later implementation lessons were not present.
 
