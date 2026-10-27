@@ -1,4 +1,4 @@
-# NetworkAI
+# EchoSocial
 
 ### A typed web client meets a Go API
 
@@ -8,9 +8,11 @@ An AI social-network project starting with a working client-to-server message fl
 
 [Run locally](#run-locally) · [Architecture details](docs/ARCHITECTURE.md) · [Development roadmap](docs/NEXT_STEPS.md)
 
-![NetworkAI message submission and API acknowledgement](docs/assets/preview.jpg)
+![EchoSocial message submission and API acknowledgement](docs/assets/preview.jpg)
 
 *Actual browser capture after a successful request to the running Go API. The message is acknowledged, not stored or published.*
+
+*Screenshots were captured before the project rename and retain the previous display name.*
 
 ## Engineering highlights
 
@@ -58,12 +60,12 @@ npm ci
 npm run dev
 ```
 
-Open http://localhost:3000. `/backend/upload` is proxied server-side to Go at `http://127.0.0.1:8080/upload`. If QuickBite is running on port 8080, stop it first or change Go's `LISTEN_ADDR` and the frontend `NETWORKAI_BACKEND_URL` together.
+Open http://localhost:3000. `/backend/upload` is proxied server-side to Go at `http://127.0.0.1:8080/upload`. If MealRoute is running on port 8080, stop it first or change Go's `LISTEN_ADDR` and the frontend `NETWORKAI_BACKEND_URL` together.
 
 ```sh
-curl -X POST http://127.0.0.1:8080/upload -H 'Content-Type: application/json' -d '{"id":"demo-1","user":"demo","message":"Hello NetworkAI","url":"","type":"image"}'
+curl -X POST http://127.0.0.1:8080/upload -H 'Content-Type: application/json' -d '{"id":"demo-1","user":"demo","message":"Hello EchoSocial","url":"","type":"image"}'
 ```
 
-Expected: `Post received: Hello NetworkAI`. No database write occurs.
+Expected: `Post received: Hello EchoSocial`. No database write occurs.
 
 See [development roadmap](docs/NEXT_STEPS.md), [course mapping](docs/COURSE_MAP.md) and [architecture](docs/ARCHITECTURE.md).
